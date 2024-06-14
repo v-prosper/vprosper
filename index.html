@@ -23,14 +23,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 300px;
-      height: 50px; /* Fixed height */
+      width: 100%;
+      max-width: 300px; /* Maximum width for larger screens */
       padding: 15px;
       border: 1px solid #333;
       border-radius: 5px;
       color: #333;
       text-decoration: none;
       margin: 0 auto;
+      box-sizing: border-box; /* Ensure padding and border are included in the width */
     }
 
     .logo {
@@ -49,6 +50,7 @@
     a:hover {
       color: #007bff;
     }
+
     footer {
       background-color: #F5D3C6;
       color: black;
@@ -68,11 +70,11 @@
     footer a:hover {
       text-decoration: underline;
     }
+
     /* Responsive Styles */
     @media screen and (max-width: 767px) {
       .link-item a {
-        width: 100%;
-        height: auto; /* Reset height for small screens */
+        padding: 10px;
       }
     }
   </style>
@@ -81,7 +83,8 @@
 </head>
 <body>
   <div id="links-container">
-  <img src="https://raw.githubusercontent.com/v-prosper/vprosper/main/png.png" alt="Your Logo" class="logo" onerror="this.onerror=null; this.src='fallback-image.png';">
+    <img src="https://raw.githubusercontent.com/v-prosper/vprosper/main/png.png" alt="Your Logo" class="logo" onerror="this.onerror=null; this.src='fallback-image.png';">
+
     <div class="link-item">
       <a href="https://vprosper.in">
         <i class="fas fa-globe social-icon"></i>
@@ -90,17 +93,17 @@
     </div>
 
     <div class="link-item">
-        <a href="https://forms.gle/oHHhRMhM3GELYEH17">
-          <i class="fas fa-poll social-icon"></i>
-          <span>Take a Wellness Survey</span>
-        </a>
-      </div>
+      <a href="https://forms.gle/oHHhRMhM3GELYEH17">
+        <i class="fas fa-poll social-icon"></i>
+        <span>Take a Wellness Survey</span>
+      </a>
+    </div>
 
     <div class="link-item">
-        <a href="https://www.facebook.com/profile.php?id=61560278146286">
-          <i class="fab fa-facebook social-icon"></i>
-          <span>Facebook</span>
-        </a>
+      <a href="https://www.facebook.com/profile.php?id=61560278146286">
+        <i class="fab fa-facebook social-icon"></i>
+        <span>Facebook</span>
+      </a>
     </div>
 
     <div class="link-item">
@@ -111,17 +114,17 @@
     </div>
 
     <div class="link-item">
-        <a href="https://x.com/vprosper_in">
-            <i class="fa fa-brands fa-square-x-twitter social-icon"></i>
-          <span>X.com</span>
-        </a>
-      </div>
+      <a href="https://x.com/vprosper_in">
+        <i class="fab fa-x-twitter social-icon"></i>
+        <span>X.com</span>
+      </a>
+    </div>
 
     <div class="link-item">
-        <a href="https://www.linkedin.com/in/v-prosper-920333312/">
-          <i class="fab fa-linkedin social-icon"></i>
-          <span>Linkdin</span>
-        </a>
+      <a href="https://www.linkedin.com/in/v-prosper-920333312/">
+        <i class="fab fa-linkedin social-icon"></i>
+        <span>LinkedIn</span>
+      </a>
     </div>
 
     <div class="link-item">
@@ -130,21 +133,19 @@
         <span>YouTube</span>
       </a>
     </div>
-    
-
 
     <div class="link-item">
-        <a href="https://www.vprosper.in/about-us">
-          <i class="fas fa-info-circle social-icon"></i>
-          <span>About Us</span>
-        </a>
-      </div>
-
-      <footer>
-        © Copyright 2024 V Prosper | <a href="https://www.vprosper.in/privacy-policy">Privacy Policy</a> | <a href="https://www.vprosper.in/terms-conditions">Terms & Condition</a>
-      </footer>
-
+      <a href="https://www.vprosper.in/about-us">
+        <i class="fas fa-info-circle social-icon"></i>
+        <span>About Us</span>
+      </a>
+    </div>
   </div>
+
+  <footer>
+    © Copyright 2024 V Prosper | <a href="https://www.vprosper.in/privacy-policy">Privacy Policy</a> | <a href="https://www.vprosper.in/terms-conditions">Terms & Condition</a>
+  </footer>
+
   <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script> <!-- Replace with your Font Awesome Kit URL -->
 </body>
 </html>
