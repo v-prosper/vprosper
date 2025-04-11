@@ -3,158 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>V Prosper Links - Wellness</title>
+  <title>V Prosper | Connect With Us</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <style>
+    :root {
+      /* Define colors based on V Prosper Brand Analysis */
+      --bg-color: #FFFFFF;         /* Clean White Background */
+      --text-color-dark: #4F4F4F; /* Dark Grey for readability */
+      --text-color-light: #FFFFFF; /* White for use on colored buttons */
+      --primary-color: #F5624E;    /* Coral/Orange-Red from Logo */
+      --secondary-color: #CC2B5E;  /* Deep Pink/Magenta from Logo */
+      --footer-text: #777777;     /* Standard Grey for footer text */
+      /* Neutral Shadows */
+      --shadow-color-light: rgba(0, 0, 0, 0.05);
+      --shadow-color-medium: rgba(0, 0, 0, 0.1);
+    }
+
     body {
-      font-family: 'Nunito Sans', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       text-align: center;
       margin: 0;
-      padding: 40px 20px; /* Increased vertical padding */
-      /* Subtle gradient background */
-      background: linear-gradient(to bottom, #FAF8F7, #FDFBF9);
-      color: #5D4037; /* Dark brown text */
-      line-height: 1.6;
-      min-height: 100vh; /* Ensure gradient covers full height */
-      display: flex; /* Use flexbox for centering */
-      flex-direction: column; /* Stack elements vertically */
-      align-items: center; /* Center items horizontally */
+      padding: 60px 20px;
+      /* Updated background */
+      background-color: var(--bg-color);
+      color: var(--text-color-dark); /* Default text is dark grey */
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
     }
 
     #links-container {
-      max-width: 480px; /* Slightly wider container */
-      width: 90%; /* Responsive width */
-      margin: 20px auto; /* Center container, add some top/bottom margin */
-      padding: 30px 25px; /* Padding inside the container */
-      background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background for container */
-      border-radius: 15px; /* Rounded corners for container */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for container */
-      flex-grow: 1; /* Allow container to grow */
+      max-width: 500px;
+      width: 95%;
+      margin: 30px auto;
+      padding: 10px; /* Minimal padding, container is mainly for structure */
+      /* Remove container background and blur */
+      background-color: transparent;
+      border-radius: 20px;
+      /* Rely only on shadow for definition */
+      box-shadow: 0 10px 30px var(--shadow-color-medium);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .logo {
-      width: 170px; /* Slightly larger logo */
+      width: 180px;
       height: auto;
-      margin-bottom: 45px; /* More space below logo */
-      display: block; /* Ensure it behaves as a block element */
-      margin-left: auto; /* Center logo */
-      margin-right: auto; /* Center logo */
+      margin-bottom: 50px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .link-item {
-      margin-bottom: 20px; /* Consistent spacing */
+      margin-bottom: 22px;
       display: flex;
       justify-content: center;
     }
 
     .link-item a {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center; /* Center content */
+      text-align: center;
       width: 100%;
-      padding: 18px 25px;
+      padding: 20px 25px;
       border: none;
-      background-color: #E8F5E9; /* Soft Sage Green */
-      border-radius: 12px; /* Slightly more rounded corners */
-      color: inherit;
+      /* Use Primary Brand Color for Link Background */
+      background-color: var(--primary-color);
+      border-radius: 30px; /* Pill shape */
+      /* Use Light Text on colored background */
+      color: var(--text-color-light);
       text-decoration: none;
       box-sizing: border-box;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      /* Updated transition for transform */
-      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-      font-weight: 600;
+      box-shadow: 0 2px 5px var(--shadow-color-medium); /* Subtle shadow on links */
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+      font-weight: 500;
     }
 
     .link-item a:hover,
-    .link-item a:focus { /* Added focus state for accessibility */
-      background-color: #D7EED9; /* Slightly darker sage */
-      /* Enhanced hover effect: lift and slight scale */
-      transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow on hover */
-      color: inherit;
-      outline: none; /* Remove default focus outline if custom style is sufficient */
+    .link-item a:focus {
+      /* Use Secondary Brand Color for Hover Background */
+      background-color: var(--secondary-color);
+      transform: translateY(-3px); /* Slightly more lift */
+      box-shadow: 0 5px 10px var(--shadow-color-medium); /* Enhanced shadow */
+      color: var(--text-color-light); /* Keep text light */
+      outline: none;
     }
 
     .social-icon {
       font-size: 20px;
-      width: 25px;
+      width: 30px;
       text-align: center;
-      margin-right: 15px;
-      line-height: 1;
-      color: inherit;
-      flex-shrink: 0; /* Prevent icon from shrinking */
+      margin-right: 0;
+      margin-bottom: 10px;
+      /* Icon color matches text color on link */
+      color: var(--text-color-light);
+      flex-shrink: 0;
+      /* No separate transition needed, matches text */
     }
 
+    /* No change needed for icon color on hover as it stays white */
+    /* .link-item a:hover .social-icon,
+    .link-item a:focus .social-icon {} */
+
     .link-item a span {
-       flex-grow: 1;
-       text-align: left;
+       display: block;
     }
 
     footer {
-      background-color: transparent; /* Make footer background transparent */
-      color: #7A7A7A; /* Softer grey for footer text */
-      padding: 20px 0 15px 0;
-      margin-top: auto; /* Push footer to bottom */
+      background-color: transparent;
+      color: var(--footer-text);
+      padding: 30px 0 15px 0;
+      margin-top: 40px;
       width: 100%;
       text-align: center;
-      font-size: 0.9em;
-      border-top: none; /* Remove top border */
+      font-size: 0.85em;
+      font-weight: 300;
     }
 
     footer a {
-      /* Use a slightly darker green for footer links */
-      color: #A5D6A7;
+      /* Use Secondary Brand Color for Footer Links */
+      color: var(--secondary-color);
       text-decoration: none;
       margin: 0 10px;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
     }
 
     footer a:hover,
-    footer a:focus { /* Added focus state */
-      color: #81C784; /* Medium Green on hover/focus */
+    footer a:focus {
+      /* Use Primary Brand Color for Footer Link Hover */
+      color: var(--primary-color);
       text-decoration: underline;
-      outline: none; /* Remove default focus outline */
+      outline: none;
     }
 
-    /* Responsive Styles */
+    /* Responsive Adjustments (remain the same) */
     @media screen and (max-width: 767px) {
-      body {
-        padding: 25px 15px;
-      }
-       #links-container {
-        padding: 25px 20px;
-        width: 95%;
-      }
-      .link-item a {
-        padding: 16px 20px;
-      }
-       .social-icon {
-         margin-right: 12px;
-       }
-       .logo {
-         width: 150px;
-         margin-bottom: 35px;
-       }
+      body { padding: 40px 15px; }
+       #links-container { padding: 5px; width: 95%; } /* Adjust container padding */
+      .link-item a { padding: 18px 20px; border-radius: 25px; }
+       .social-icon { font-size: 19px; margin-bottom: 8px; width: 25px; }
+       .logo { width: 160px; margin-bottom: 40px; }
     }
      @media screen and (max-width: 480px) {
-        .link-item a {
-            padding: 14px 15px; /* Further adjust padding for very small screens */
-        }
-         .social-icon {
-            font-size: 18px; /* Slightly smaller icons */
-            width: 20px;
-            margin-right: 10px;
-         }
+        #links-container { padding: 0px; } /* Minimal container padding */
+        .link-item a { padding: 16px 18px; border-radius: 20px; }
+         .social-icon { font-size: 18px; margin-bottom: 6px; width: 22px; }
+         .logo { width: 140px; }
+         body { padding: 30px 10px; }
      }
 
   </style>
 </head>
 <body>
   <div id="links-container">
-    <img src="https://raw.githubusercontent.com/v-prosper/vprosper/main/png.png" alt="V Prosper Logo" class="logo" onerror="this.onerror=null; this.src='https://placehold.co/170x85/E8F5E9/5D4037?text=V+Prosper';">
+                                                                                                         <img src="https://raw.githubusercontent.com/v-prosper/vprosper/main/png.png" alt="V Prosper Logo" class="logo" onerror="this.onerror=null; this.src='https://placehold.co/180x90/F5624E/FFFFFF?text=V+Prosper';" />
 
     <div class="link-item">
       <a href="https://vprosper.in">
@@ -179,14 +193,14 @@
 
     <div class="link-item">
       <a href="https://forms.gle/oHHhRMhM3GELYEH17">
-        <i class="fas fa-poll social-icon"></i>
+        <i class="fas fa-poll-h social-icon"></i>
         <span>Take a Wellness Survey</span>
       </a>
     </div>
 
     <div class="link-item">
       <a href="https://www.facebook.com/profile.php?id=61560278146286">
-        <i class="fab fa-facebook social-icon"></i>
+        <i class="fab fa-facebook-f social-icon"></i>
         <span>Facebook</span>
       </a>
     </div>
@@ -207,7 +221,7 @@
 
     <div class="link-item">
       <a href="https://www.linkedin.com/in/v-prosper-920333312/">
-        <i class="fab fa-linkedin social-icon"></i>
+        <i class="fab fa-linkedin-in social-icon"></i>
         <span>LinkedIn</span>
       </a>
     </div>
@@ -225,7 +239,7 @@
         <span>About Us</span>
       </a>
     </div>
-  </div>
+    </div>
 
   <footer>
     © Copyright 2024 V Prosper | <a href="https://www.vprosper.in/privacy-policy">Privacy Policy</a> | <a href="https://vprosper.in/terms-of-use/">Terms & Condition</a>
