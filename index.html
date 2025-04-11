@@ -41,10 +41,14 @@
     }
 
     .social-icon {
-      width: 20px;
-      height: auto;
+      width: 20px; /* Fixed width */
+      height: 20px; /* Fixed height to match width */
       margin-bottom: 10px;
+      text-align: center; /* Center the icon */
+      line-height: 20px; /* Vertically center icon if needed */
+      font-size: 20px; /* Ensure icon size matches dimensions */
     }
+
 
     /* Define colors for links */
     a:hover {
@@ -78,7 +82,6 @@
       }
     }
   </style>
-  <!-- Include the necessary CSS file for the icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
@@ -93,11 +96,15 @@
     </div>
     
     <div class="link-item">
-    <a href="https://app.vprosper.in">
-      <i class="fas fa-mobile social-icon"></i>
-      <span>Our App</span>
-    </a>
-  </div>
+      <a href="https://app.vprosper.in">
+        <i class="fas fa-mobile-alt social-icon"></i> <span>Our Web App</span> </a>
+    </div>
+
+    <div class="link-item">
+      <a href="https://play.google.com/store/apps/details?id=com.rmpl.vprosperfinal">
+        <i class="fab fa-google-play social-icon"></i> <span>Download on Play Store</span>
+      </a>
+    </div>
     
     <div class="link-item">
       <a href="https://forms.gle/oHHhRMhM3GELYEH17">
@@ -135,7 +142,7 @@
     </div>
 
     <div class="link-item">
-      <a href="https://www.youtube.com/@vprosper">
+       <a href="https://www.youtube.com/@vprosper">
         <i class="fab fa-youtube social-icon"></i>
         <span>YouTube</span>
       </a>
@@ -153,6 +160,5 @@
     © Copyright 2024 V Prosper | <a href="https://www.vprosper.in/privacy-policy">Privacy Policy</a> | <a href="https://vprosper.in/terms-of-use/">Terms & Condition</a>
   </footer>
 
-  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script> <!-- Replace with your Font Awesome Kit URL -->
-</body>
+  </body>
 </html>
