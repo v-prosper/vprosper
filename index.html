@@ -64,7 +64,7 @@
     }
 
     .link-item {
-      margin-bottom: 22px;
+      margin-bottom: 20px; /* Slightly reduced margin between buttons */
       display: flex;
       justify-content: center;
     }
@@ -74,45 +74,47 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      width: 100%; /* Button takes full width within padded container */
-      padding: 20px 25px;
+      width: 100%;
+      /* Reduced vertical padding */
+      padding: 14px 25px;
       border: none;
-      /* Use Pastel Primary Color */
       background-color: var(--primary-color);
-      border-radius: 30px; /* Pill shape */
-      /* Use Darker Text on pastel background */
+      /* Slightly reduced border-radius */
+      border-radius: 25px;
       color: var(--text-color-darker);
       text-decoration: none;
       box-sizing: border-box;
       box-shadow: 0 2px 5px var(--shadow-color-medium);
       transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
-      font-weight: 500;
+      /* Lighter font weight */
+      font-weight: 400;
     }
 
     .link-item a:hover,
     .link-item a:focus {
-      /* Use Pastel Secondary Color for Hover */
       background-color: var(--secondary-color);
-      transform: translateY(-3px);
-      box-shadow: 0 5px 10px var(--shadow-color-medium);
-      /* Keep text dark */
+      transform: translateY(-2px); /* Slightly less lift on hover */
+      box-shadow: 0 4px 8px var(--shadow-color-medium); /* Adjusted hover shadow */
       color: var(--text-color-darker);
       outline: none;
     }
 
     .social-icon {
-      font-size: 20px;
-      width: 30px;
+      /* Adjusted icon size slightly */
+      font-size: 18px;
+      width: 25px; /* Adjusted width */
       text-align: center;
       margin-right: 0;
-      margin-bottom: 10px;
-      /* Icon color matches text color on link */
+      /* Adjusted margin */
+      margin-bottom: 8px;
       color: var(--text-color-darker);
       flex-shrink: 0;
     }
 
     .link-item a span {
        display: block;
+       /* Ensure text size is appropriate */
+       font-size: 0.95em;
     }
 
     footer {
@@ -127,7 +129,6 @@
     }
 
     footer a {
-      /* Use Pastel Secondary Color for Footer Links */
       color: var(--secondary-color);
       text-decoration: none;
       margin: 0 10px;
@@ -136,9 +137,7 @@
 
     footer a:hover,
     footer a:focus {
-      /* Use Pastel Primary Color for Footer Link Hover */
       color: var(--primary-color);
-      /* Let's add underline on hover for clarity */
       text-decoration: underline;
       outline: none;
     }
@@ -147,21 +146,37 @@
     @media screen and (max-width: 767px) {
       body { padding: 40px 15px; }
        #links-container {
-         /* Adjusted responsive padding */
          padding: 10px 20px;
          width: 95%;
        }
-      .link-item a { padding: 18px 20px; border-radius: 25px; }
-       .social-icon { font-size: 19px; margin-bottom: 8px; width: 25px; }
+      .link-item a {
+        /* Adjusted responsive padding */
+        padding: 12px 20px;
+        /* Adjusted responsive radius */
+        border-radius: 20px;
+      }
+       .social-icon {
+         font-size: 17px; /* Adjusted responsive icon size */
+         margin-bottom: 6px;
+         width: 22px;
+       }
        .logo { width: 160px; margin-bottom: 40px; }
     }
      @media screen and (max-width: 480px) {
         #links-container {
-          /* Adjusted responsive padding */
           padding: 10px 15px;
         }
-        .link-item a { padding: 16px 18px; border-radius: 20px; }
-         .social-icon { font-size: 18px; margin-bottom: 6px; width: 22px; }
+        .link-item a {
+          /* Adjusted responsive padding */
+          padding: 10px 15px;
+          /* Adjusted responsive radius */
+          border-radius: 18px;
+        }
+         .social-icon {
+           font-size: 16px; /* Adjusted responsive icon size */
+           margin-bottom: 5px;
+           width: 20px;
+         }
          .logo { width: 140px; }
          body { padding: 30px 10px; }
      }
